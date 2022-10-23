@@ -1,0 +1,14 @@
+# Tomamos la imagen base de Python desde Docker Hub
+FROM python:latest
+
+# Etiqueta de la imagen creada
+LABEL Maintainer="chrisiam21"
+
+# Directorio de trabajo en el contenedor
+WORKDIR /usr/app/src
+
+# Copia los archivos de la carpeta actual al directorio de trabajo
+COPY test2.py ./
+
+# Instala las dependencias
+CMD [ "python", "./test2.py"]
